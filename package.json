@@ -1,0 +1,27 @@
+{
+  "name": "shoppinglist",
+  "version": "1.0.0",
+  "description": "shopping list desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:production": "cross-env NODE_ENV=production && npm start",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=None --version-string.FileDescription=None --version-string.ProductName=\"Imager\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+  },
+  "author": "Matthias Kolley",
+  "license": "MIT",
+  "dependencies": {
+    "@types/looks-same": "^4.1.0",
+    "cross-env": "^7.0.2",
+    "electron": "^9.0.3",
+    "looks-same": "^7.2.3",
+    "os-locale": "^5.0.0",
+    "pixelmatch": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/pixelmatch": "^5.2.1",
+    "electron-packager": "^14.2.1"
+  }
+}
